@@ -1,125 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>仮案窓口 | 木の手仕事工房</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --bg: #f4f0e8;
-      --paper: #fffdf8;
-      --text: #2d241a;
-      --muted: #6b5b46;
-      --line: #d7c9b4;
-      --accent: #8b5a2b;
-      --accent-strong: #6d431e;
-      --shadow: 0 16px 40px rgba(70, 44, 20, 0.12);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仮案</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f0e8;
+        --paper: #fffdf8;
+        --text: #2d241a;
+        --muted: #6b5b46;
+        --line: #d7c9b4;
+        --accent: #8b5a2b;
+        --accent-strong: #6d431e;
+        --shadow: 0 16px 40px rgba(70, 44, 20, 0.12);
+      }
 
-    * {
-      box-sizing: border-box;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 10% 10%, #fff8ed, var(--bg) 55%);
-      line-height: 1.6;
-    }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family:
+          "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 10% 10%, #fff8ed, var(--bg) 55%);
+        line-height: 1.6;
+      }
 
-    main {
-      width: min(920px, 92%);
-      margin: 56px auto;
-    }
+      main {
+        width: min(920px, 92%);
+        margin: 56px auto;
+      }
 
-    .panel {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 36px;
-    }
+      .panel {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 36px;
+      }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      letter-spacing: 0.04em;
-    }
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        letter-spacing: 0.04em;
+      }
 
-    .lead {
-      margin: 12px 0 26px;
-      color: var(--muted);
-    }
+      .lead {
+        margin: 12px 0 26px;
+        color: var(--muted);
+      }
 
-    .draft-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 14px;
-    }
+      .draft-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+      }
 
-    .draft-link {
-      display: block;
-      text-decoration: none;
-      color: var(--text);
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px 18px;
-      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
-    }
+      .draft-link {
+        display: block;
+        text-decoration: none;
+        color: var(--text);
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px 18px;
+        transition:
+          transform 0.16s ease,
+          border-color 0.16s ease,
+          box-shadow 0.16s ease;
+      }
 
-    .draft-link:hover,
-    .draft-link:focus-visible {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 10px 24px rgba(88, 50, 17, 0.14);
-      outline: none;
-    }
+      .draft-link:hover,
+      .draft-link:focus-visible {
+        transform: translateY(-2px);
+        border-color: var(--accent);
+        box-shadow: 0 10px 24px rgba(88, 50, 17, 0.14);
+        outline: none;
+      }
 
-    .draft-link strong {
-      display: block;
-      font-size: 1.05rem;
-      margin-bottom: 2px;
-      color: var(--accent-strong);
-    }
+      .draft-link strong {
+        display: block;
+        font-size: 1.05rem;
+        margin-bottom: 2px;
+        color: var(--accent-strong);
+      }
 
-    .draft-link span {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <section class="panel" aria-labelledby="draft-links-title">
-      <h1 id="draft-links-title">仮案</h1>
-      <p class="lead">確認したい案を選んでください。各ページに直接移動できます。</p>
-      <ul class="draft-list">
-        <li>
-          <a class="draft-link" href="draft_one.html">
-            <strong>仮案 1</strong>
-            <span>draft_one.html</span>
-          </a>
-        </li>
-        <li>
-          <a class="draft-link" href="draft_two.html">
-            <strong>仮案 2</strong>
-            <span>draft_two.html</span>
-          </a>
-        </li>
-        <li>
-          <a class="draft-link" href="draft_three.html">
-            <strong>仮案 3</strong>
-            <span>draft_three.html</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
-</body>
+      .draft-link span {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="panel" aria-labelledby="draft-links-title">
+        <h1 id="draft-links-title">仮案</h1>
+        <p class="lead">
+          確認したい案を選んでください。各ページに直接移動できます。
+        </p>
+        <ul class="draft-list">
+          <li>
+            <a class="draft-link" href="draft_one.html">
+              <strong>仮案 1</strong>
+              <span>draft_one.html</span>
+            </a>
+          </li>
+          <li>
+            <a class="draft-link" href="draft_two.html">
+              <strong>仮案 2</strong>
+              <span>draft_two.html</span>
+            </a>
+          </li>
+          <li>
+            <a class="draft-link" href="draft_three.html">
+              <strong>仮案 3</strong>
+              <span>draft_three.html</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
